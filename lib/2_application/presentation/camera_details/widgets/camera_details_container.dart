@@ -16,7 +16,7 @@ class CameraDetailsContainer extends StatelessWidget {
       child: AppScrollView(
         child: Dialog(
           backgroundColor: Colors.transparent,
-          insetPadding: EdgeInsets.all(30.w),
+          insetPadding: EdgeInsets.all(16.w),
           child: Container(
             decoration: BoxDecoration(
               color: colorScheme.surface,

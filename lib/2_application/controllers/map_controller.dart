@@ -14,8 +14,7 @@ class MapController extends GetxController {
   final minZoom = 11.5;
   final maxZoom = 18.0;
   final dialogZoomIn = 15.0;
-  late final minMaxZoomPreference =
-      MinMaxZoomPreference(minZoom, maxZoom);
+  late final minMaxZoomPreference = MinMaxZoomPreference(minZoom, maxZoom);
   late final initialCameraPosition = CameraPosition(
     target: const LatLng(1.290270, 103.851959),
     zoom: minZoom,
@@ -57,8 +56,11 @@ class MapController extends GetxController {
 
   void _setMarkerStyle() async {
     final data = await rootBundle.load(AssetsPathHelper.imagesMarker);
-    final codec = await ui.instantiateImageCodec(data.buffer.asUint8List(),
-        targetWidth: 200);
+    final codec = await ui.instantiateImageCodec(
+      data.buffer.asUint8List(),
+      targetWidth: 80,
+      targetHeight: 80,
+    );
     final frameInfo = await codec.getNextFrame();
     final icon =
         await frameInfo.image.toByteData(format: ui.ImageByteFormat.png);

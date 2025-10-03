@@ -49,27 +49,6 @@ class _SplashScreenPageState extends State<SplashScreenPage> {
                   ),
                 ),
               ),
-              SizedBox(
-                child: Row(
-                  mainAxisSize: MainAxisSize.max,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    SvgPicture.asset(
-                      AssetsPathHelper.imagesFlutter,
-                      width: 85.w,
-                    ),
-                    SizedBox(width: 50.w),
-                    SizedBox(
-                      width: 70.w,
-                      height: 35.w,
-                      child: Image.asset(
-                        AssetsPathHelper.imagesPngAbelHerl,
-                        fit: BoxFit.cover,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
               SizedBox(height: 24.w),
             ],
           ),

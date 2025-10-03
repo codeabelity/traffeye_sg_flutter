@@ -19,12 +19,12 @@ abstract class AppTheme {
   static const Color positiveColor = Color(0xFF6DBB61);
   static const Color negativeColor = Color(0xFFCB4444);
   static const Color lightCaptionColor = Color(0xFF7D7D7D);
-  static const Color lightDisableColor = Color(0xFFB6B6B6);
+  static const Color lightDisableColor = Color.fromARGB(255, 202, 202, 202);
   static const Color lightHintColor = Color(0xFF9E9E9E);
   static final Color negativeSplashColor = negativeColor.withAlpha(26);
   static final Color positiveSplashColor = positiveColor.withAlpha(26);
   static final Color imagesSplashColor = _lightAccentVariantColor.withAlpha(77);
-  static final Color barrierColor = _lightPrimaryColor.withAlpha(128);
+  static final Color barrierColor = _lightPrimaryColor.withAlpha(160);
 
   // * Text Style - Light
   static final TextStyle _lightDisplayText = GoogleFonts.montserrat(
@@ -85,6 +85,7 @@ abstract class AppTheme {
       tertiary: _lightAccentColor,
       tertiaryContainer: _lightAccentVariantColor,
       primaryContainer: _lightPrimaryVariantColor,
+      outline: _lightCaptionColor,
     ),
     textTheme: _lightTextTheme,
     bottomAppBarTheme: const BottomAppBarThemeData(color: _lightAppBarColor),

@@ -48,26 +48,24 @@ class CameraController extends GetxController with StateMixin {
       {required TrafficCameraEntity camera, required Function() callback}) {
     final either = trafficCameraUseCases.updateCamera(camera);
 
-    either.fold(
-        (left) => _onFailure(left), (right) => _updateAllCamerasValue(isCheckLastUpdated: false));
+    either.fold((left) => _onFailure(left),
+        (right) => _updateAllCamerasValue(isCheckLastUpdated: false));
 
     callback();
   }
 
-  void updateCameras(
-      {required List<TrafficCameraEntity> cameras}) {
+  void updateCameras({required List<TrafficCameraEntity> cameras}) {
     final either = trafficCameraUseCases.updateAllCameras(cameras);
 
     either.fold(
-            (left) => _onFailure(left), (right) => _updateAllCamerasValue());
+        (left) => _onFailure(left), (right) => _updateAllCamerasValue());
   }
 
-  void updateSavedCameras(
-      {required List<TrafficCameraEntity> savedCameras}) {
+  void updateSavedCameras({required List<TrafficCameraEntity> savedCameras}) {
     final either = trafficCameraUseCases.updateSavedCameras(savedCameras);
 
     either.fold(
-            (left) => _onFailure(left), (right) => _updateAllCamerasValue());
+        (left) => _onFailure(left), (right) => _updateAllCamerasValue());
   }
 
   // * Private Methods
@@ -113,6 +111,7 @@ class CameraController extends GetxController with StateMixin {
   }
 
   void _onFailure(Failure failure) {
+    if (Failure is GeneralFailure) return;
     AppSnackBar.showSnackBar(AppSnackBarData.fromFailure(failure));
   }
 
@@ -143,12 +142,16 @@ class CameraController extends GetxController with StateMixin {
 
     savedCameras.sort((a, b) => a.sortIndex!.compareTo(b.sortIndex!));
 
-    _updateLastUpdated(dateTime: cameras.firstOrNull?.timestamp, isCheckLastUpdated: isCheckLastUpdated,);
+    _updateLastUpdated(
+      dateTime: cameras.firstOrNull?.timestamp,
+      isCheckLastUpdated: isCheckLastUpdated,
+    );
 
     _change(RxStatus.success());
   }
 
-  void _updateLastUpdated({DateTime? dateTime, bool isCheckLastUpdated = true}) async {
+  void _updateLastUpdated(
+      {DateTime? dateTime, bool isCheckLastUpdated = true}) async {
     if (dateTime == _lastUpdated.value && isCheckLastUpdated) {
       _hideRefreshButton(reverse: true);
 

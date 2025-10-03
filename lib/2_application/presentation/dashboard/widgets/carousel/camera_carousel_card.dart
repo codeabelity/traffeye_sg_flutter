@@ -4,6 +4,7 @@ import 'package:traffeye_sg_flutter/1_domain/entities/traffic_camera_entity.dart
 import 'package:traffeye_sg_flutter/2_application/core/helpers/style_helper.dart';
 import 'package:traffeye_sg_flutter/2_application/core/widgets/app_ink_well.dart';
 import 'package:traffeye_sg_flutter/2_application/presentation/camera_details/camera_details_pop_up.dart';
+import 'package:traffeye_sg_flutter/theme.dart';
 
 class CameraCarouselCard extends StatelessWidget {
   final TrafficCameraEntity camera;
@@ -27,6 +28,7 @@ class CameraCarouselCard extends StatelessWidget {
           child: Container(
             decoration: BoxDecoration(
               borderRadius: borderRadius,
+              border: Border.all(color: AppTheme.lightDisableColor),
               image: DecorationImage(
                 image: image,
                 fit: BoxFit.fill,

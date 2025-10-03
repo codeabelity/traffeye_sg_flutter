@@ -42,7 +42,7 @@ class MapView extends StatelessWidget {
         location.latitude,
         location.longitude,
       ),
-      // icon: mapController.markerIcon.value,
+      icon: mapController.markerIcon.value,
       onTap: () async {
         final currentZoom = await mapController.getZoomLevel();
 

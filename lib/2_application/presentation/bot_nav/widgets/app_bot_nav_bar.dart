@@ -43,11 +43,11 @@ class AppBotNavBar extends StatelessWidget {
             )
           ],
           borderRadius: 160.r,
-          items: icons.map(
-            (icon) => DotNavigationBarItem(
-              icon: SvgPicture.asset(icon),
-            ),
-          ).toList(),
+          items: icons
+              .map(
+                (icon) => DotNavigationBarItem(icon: SvgPicture.asset(icon)),
+              )
+              .toList(),
         ),
       ),
     );

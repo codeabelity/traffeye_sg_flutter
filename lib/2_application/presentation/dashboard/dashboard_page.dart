@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -60,11 +62,12 @@ class DashboardPage extends StatelessWidget {
               physics: const BouncingScrollPhysics(),
               child: Padding(
                 padding: EdgeInsets.symmetric(vertical: 16.w),
-                child: const Column(
+                child: Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
-                    SavedCamerasSection(),
-                    FeaturesSection(),
+                    const SavedCamerasSection(),
+                    const FeaturesSection(),
+                    if (Platform.isIOS) SizedBox(height: 32.w),
                   ],
                 ),
               ),

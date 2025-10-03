@@ -31,8 +31,8 @@ class AppTextField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final controller = Get.put(
-        AppTextFieldController(currentLength: initialText.length.obs));
+    final controller =
+        Get.put(AppTextFieldController(currentLength: initialText.length.obs));
     final theme = Theme.of(context);
     final borderRadiusSmall = StyleHelper.borderRadiusSmall;
     final textController = TextEditingController(text: initialText);
@@ -57,56 +57,55 @@ class AppTextField extends StatelessWidget {
               )
             ],
           ),
-          child: Obx(
-            () => TextField(
-              style: theme.textTheme.bodyLarge,
-              textInputAction: textInputAction,
-              maxLength: maxCharacter,
-              controller: textController,
-              decoration: InputDecoration(
-                border: OutlineInputBorder(
-                  borderRadius: borderRadiusSmall,
-                  borderSide: BorderSide.none,
-                ),
-                contentPadding: EdgeInsets.symmetric(
-                  horizontal: 16.w,
-                  vertical: 12.w,
-                ),
-                counter: Container(),
-                filled: true,
-                fillColor: Colors.white,
-                hintText: hint,
-                hintStyle: theme.textTheme.bodyLarge?.copyWith(
-                  color: AppTheme.lightHintColor,
-                ),
-                suffix: Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    SizedBox(width: 10.w),
+          child: TextField(
+            style: theme.textTheme.bodyLarge,
+            textInputAction: textInputAction,
+            maxLength: maxCharacter,
+            controller: textController,
+            decoration: InputDecoration(
+              border: OutlineInputBorder(
+                borderRadius: borderRadiusSmall,
+                borderSide: BorderSide.none,
+              ),
+              contentPadding: EdgeInsets.symmetric(
+                horizontal: 16.w,
+                vertical: 12.w,
+              ),
+              counter: Container(),
+              filled: true,
+              fillColor: Colors.white,
+              hintText: hint,
+              hintStyle: theme.textTheme.bodyLarge?.copyWith(
+                color: AppTheme.lightHintColor,
+              ),
+              suffix: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  SizedBox(width: 10.w),
+                  if (maxCharacter != null)
                     ThemedText(
                       '${controller.currentLength.value}/$maxCharacter',
                       themedTextStyle: ThemedTextStyle.caption,
                       isMarkdown: false,
                     ),
-                    if (iconPath != null)
-                      SvgPicture.asset(
-                        iconPath!,
-                        height: 18.w,
-                        width: 18.w,
-                        fit: BoxFit.scaleDown,
-                      ),
-                  ],
-                ),
+                  if (iconPath != null)
+                    SvgPicture.asset(
+                      iconPath!,
+                      height: 18.w,
+                      width: 18.w,
+                      fit: BoxFit.scaleDown,
+                    ),
+                ],
               ),
-              onChanged: (text) {
-                controller.changeCurrentLengthTo(text.length);
-
-                if (onChanged != null) {
-                  onChanged!(text);
-                }
-              },
-              onSubmitted: onSubmitted,
             ),
+            onChanged: (text) {
+              controller.changeCurrentLengthTo(text.length);
+
+              if (onChanged != null) {
+                onChanged!(text);
+              }
+            },
+            onSubmitted: onSubmitted,
           ),
         ),
       ],

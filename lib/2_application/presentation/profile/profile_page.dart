@@ -13,13 +13,15 @@ class ProfilePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final bgColor = Theme.of(context).colorScheme.surface;
     return Scaffold(
       appBar: ThemedAppBar(
         title: IntlHelper.profile.tr,
         enableBackButton: false,
       ),
+      backgroundColor: bgColor,
       body: Container(
-        color: Theme.of(context).colorScheme.surface,
+        color: bgColor,
         child: AppScrollView(
           padding: EdgeInsets.only(bottom: 100.w),
           child: const Column(
@@ -34,4 +36,3 @@ class ProfilePage extends StatelessWidget {
     );
   }
 }
-

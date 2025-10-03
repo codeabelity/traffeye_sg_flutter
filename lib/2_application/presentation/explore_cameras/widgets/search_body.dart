@@ -28,7 +28,9 @@ class SearchBody extends StatelessWidget {
                   itemCount: exploreController.searchedCameras.length,
                   separatorBuilder: (_, __) => SizedBox(height: 16.w),
                   itemBuilder: (context, index) => CameraCarouselCard(
-                      camera: exploreController.searchedCameras[index])),
+                    camera: exploreController.searchedCameras[index],
+                  ),
+                ),
         ),
       ),
     );

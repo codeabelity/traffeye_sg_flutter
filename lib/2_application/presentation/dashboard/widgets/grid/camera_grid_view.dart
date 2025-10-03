@@ -53,6 +53,7 @@ class _GridView extends StatelessWidget {
         crossAxisSpacing: 18.w,
         childAspectRatio: StyleHelper.ratioGrid,
       ),
+      physics: const NeverScrollableScrollPhysics(),
       padding: EdgeInsets.symmetric(horizontal: 16.w),
       itemCount: cameras.length,
       itemBuilder: (_, index) =>
