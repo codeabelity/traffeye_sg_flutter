@@ -37,7 +37,6 @@ class CameraGridView extends StatelessWidget {
 }
 
 class _GridView extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     final controller = Get.find<CameraController>();
@@ -49,15 +48,14 @@ class _GridView extends StatelessWidget {
       shrinkWrap: true,
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,
-        mainAxisSpacing: 18.w,
-        crossAxisSpacing: 18.w,
+        mainAxisSpacing: 8.w,
+        crossAxisSpacing: 8.w,
         childAspectRatio: StyleHelper.ratioGrid,
       ),
       physics: const NeverScrollableScrollPhysics(),
       padding: EdgeInsets.symmetric(horizontal: 16.w),
       itemCount: cameras.length,
-      itemBuilder: (_, index) =>
-          CameraGridCard(camera: cameras[index]),
+      itemBuilder: (_, index) => CameraGridCard(camera: cameras[index]),
     );
   }
 }
