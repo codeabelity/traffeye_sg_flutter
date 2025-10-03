@@ -21,10 +21,10 @@ abstract class AppTheme {
   static const Color lightCaptionColor = Color(0xFF7D7D7D);
   static const Color lightDisableColor = Color(0xFFB6B6B6);
   static const Color lightHintColor = Color(0xFF9E9E9E);
-  static final Color negativeSplashColor = negativeColor.withOpacity(0.1);
-  static final Color positiveSplashColor = positiveColor.withOpacity(0.1);
-  static final Color imagesSplashColor = _lightAccentVariantColor.withOpacity(0.3);
-  static final Color barrierColor = _lightPrimaryColor.withOpacity(0.5);
+  static final Color negativeSplashColor = negativeColor.withAlpha(26);
+  static final Color positiveSplashColor = positiveColor.withAlpha(26);
+  static final Color imagesSplashColor = _lightAccentVariantColor.withAlpha(77);
+  static final Color barrierColor = _lightPrimaryColor.withAlpha(128);
 
   // * Text Style - Light
   static final TextStyle _lightDisplayText = GoogleFonts.montserrat(
@@ -73,12 +73,12 @@ abstract class AppTheme {
   static final ThemeData lightTheme = ThemeData(
     scaffoldBackgroundColor: _lightPrimaryColor,
     appBarTheme: const AppBarTheme(
-      color: _lightAppBarColor,
+      backgroundColor: _lightAppBarColor,
       iconTheme: IconThemeData(color: _lightIconColor),
     ),
     colorScheme: const ColorScheme.light(
-      background: _lightBackgroundColor,
-      onBackground: _lightOnBackgroundColor,
+      surface: _lightBackgroundColor,
+      onSurface: _lightOnBackgroundColor,
       primary: _lightPrimaryColor,
       onPrimary: _lightOnPrimaryColor,
       secondary: _lightIconColor,
@@ -87,6 +87,6 @@ abstract class AppTheme {
       primaryContainer: _lightPrimaryVariantColor,
     ),
     textTheme: _lightTextTheme,
-    bottomAppBarTheme: const BottomAppBarTheme(color: _lightAppBarColor),
+    bottomAppBarTheme: const BottomAppBarThemeData(color: _lightAppBarColor),
   );
 }

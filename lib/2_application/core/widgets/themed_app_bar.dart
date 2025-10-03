@@ -20,7 +20,7 @@ class ThemedAppBar extends StatelessWidget implements PreferredSizeWidget {
       title: ThemedText(
         title,
         themedTextStyle: ThemedTextStyle.title,
-        color: Theme.of(context).colorScheme.background,
+        color: Theme.of(context).colorScheme.surface,
       ),
       elevation: 0,
       centerTitle: true,

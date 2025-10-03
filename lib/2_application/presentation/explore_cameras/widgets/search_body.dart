@@ -8,7 +8,7 @@ import 'package:traffeye_sg_flutter/2_application/core/widgets/warning_widget.da
 import 'package:traffeye_sg_flutter/2_application/presentation/dashboard/widgets/carousel/camera_carousel_card.dart';
 
 class SearchBody extends StatelessWidget {
-  const SearchBody({Key? key}) : super(key: key);
+  const SearchBody({super.key});
 
   @override
   Widget build(BuildContext context) {

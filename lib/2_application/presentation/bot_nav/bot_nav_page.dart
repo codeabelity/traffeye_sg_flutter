@@ -10,7 +10,7 @@ import 'package:traffeye_sg_flutter/2_application/presentation/saved_cameras/sav
 import 'widgets/app_floating_action_button.dart';
 
 class BotNavPage extends StatelessWidget {
-  const BotNavPage({Key? key}) : super(key: key);
+  const BotNavPage({super.key});
 
   @override
   Widget build(BuildContext context) {

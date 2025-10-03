@@ -10,7 +10,7 @@ import 'package:traffeye_sg_flutter/2_application/presentation/dashboard/widgets
 import 'package:traffeye_sg_flutter/2_application/widgets/themed_text.dart';
 
 class SavedCamerasSection extends StatelessWidget {
-  const SavedCamerasSection({Key? key}) : super(key: key);
+  const SavedCamerasSection({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -11,10 +11,10 @@ class SaveButton extends StatelessWidget {
   final Function() onPressed;
 
   const SaveButton({
-    Key? key,
+    super.key,
     required this.isEnabled,
     required this.onPressed,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -24,15 +24,15 @@ class SaveButton extends StatelessWidget {
     return TextButton(
       onPressed: () => isEnabled ? onPressed() : null,
       style: ButtonStyle(
-        padding: MaterialStatePropertyAll(
+        padding: WidgetStatePropertyAll(
           EdgeInsets.all(12.w),
         ),
-        shape: MaterialStatePropertyAll(
+        shape: WidgetStatePropertyAll(
           RoundedRectangleBorder(
             borderRadius: StyleHelper.borderRadiusSmall,
           ),
         ),
-        backgroundColor: MaterialStatePropertyAll(
+        backgroundColor: WidgetStatePropertyAll(
           isEnabled
               ? AppTheme.positiveColor
               : AppTheme.lightDisableColor,

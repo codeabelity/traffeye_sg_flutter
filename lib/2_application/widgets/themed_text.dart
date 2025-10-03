@@ -58,7 +58,7 @@ class ThemedText extends StatelessWidget {
           return SimpleRichText(
             text,
             style: textStyle?.copyWith(
-              color: color ?? theme.colorScheme.onBackground,
+              color: color ?? theme.colorScheme.onSurface,
             ),
             maxLines: maxLines,
           );
@@ -67,7 +67,7 @@ class ThemedText extends StatelessWidget {
         return Text(
           text,
           style: textStyle?.copyWith(
-            color: color ?? theme.colorScheme.onBackground,
+            color: color ?? theme.colorScheme.onSurface,
           ),
           maxLines: maxLines,
         );

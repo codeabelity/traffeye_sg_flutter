@@ -9,9 +9,9 @@ class CameraCarouselCard extends StatelessWidget {
   final TrafficCameraEntity camera;
 
   const CameraCarouselCard({
-    Key? key,
+    super.key,
     required this.camera,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

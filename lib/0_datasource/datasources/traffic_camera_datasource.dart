@@ -7,7 +7,6 @@ import 'package:traffeye_sg_flutter/0_datasource/exceptions/exceptions.dart';
 import 'package:traffeye_sg_flutter/0_datasource/models/traffic_camera_model.dart';
 import 'package:traffeye_sg_flutter/1_domain/entities/traffic_camera_entity.dart';
 import 'package:traffeye_sg_flutter/2_application/core/helpers/api_helper.dart';
-import 'package:traffeye_sg_flutter/2_application/core/helpers/box_tags_helper.dart';
 
 abstract class TrafficCameraDatasource {
   Future<List<TrafficCameraModel>> fetchSnapshotsFromRemote();

@@ -19,7 +19,7 @@ class ProfilePage extends StatelessWidget {
         enableBackButton: false,
       ),
       body: Container(
-        color: Theme.of(context).colorScheme.background,
+        color: Theme.of(context).colorScheme.surface,
         child: AppScrollView(
           padding: EdgeInsets.only(bottom: 100.w),
           child: const Column(

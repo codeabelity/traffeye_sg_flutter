@@ -12,7 +12,7 @@ import 'package:traffeye_sg_flutter/2_application/presentation/explore_cameras/w
 import 'package:traffeye_sg_flutter/theme.dart';
 
 class ExploreCamerasPage extends StatelessWidget {
-  const ExploreCamerasPage({Key? key}) : super(key: key);
+  const ExploreCamerasPage({super.key});
 
   static const icons = [
     Icons.threesixty_rounded,

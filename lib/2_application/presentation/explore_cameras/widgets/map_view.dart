@@ -8,7 +8,7 @@ import 'package:traffeye_sg_flutter/2_application/core/widgets/unfocuser.dart';
 import 'package:traffeye_sg_flutter/2_application/presentation/camera_details/camera_details_pop_up.dart';
 
 class MapView extends StatelessWidget {
-  const MapView({Key? key}) : super(key: key);
+  const MapView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -42,14 +42,14 @@ class MapView extends StatelessWidget {
         location.latitude,
         location.longitude,
       ),
-      icon: mapController.markerIcon.value,
+      // icon: mapController.markerIcon.value,
       onTap: () async {
         final currentZoom = await mapController.getZoomLevel();
 
         mapController.setMapZoomLevel(
             location: location, zoom: mapController.dialogZoomIn);
-        CameraDetailsPopUp.openDialog(camera: camera).then((_) => mapController.setMapZoomLevel(
-            location: location, zoom: currentZoom));
+        CameraDetailsPopUp.openDialog(camera: camera).then((_) => mapController
+            .setMapZoomLevel(location: location, zoom: currentZoom));
       },
     );
   }

@@ -24,7 +24,7 @@ class SavedCamerasPage extends StatelessWidget {
         ),
         body: Container(
           height: double.infinity,
-          color: colorScheme.background,
+          color: colorScheme.surface,
           child: controller.savedCameras.isEmpty
               ? WarningWidget(
                   title: IntlHelper.errorNoSavedCamerasTitle.tr,

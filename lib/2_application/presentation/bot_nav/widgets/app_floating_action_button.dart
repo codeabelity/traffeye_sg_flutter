@@ -6,7 +6,7 @@ import 'package:traffeye_sg_flutter/2_application/controllers/camera_controller.
 import 'package:traffeye_sg_flutter/2_application/core/helpers/assets_path_helper.dart';
 
 class AppFloatingActionButton extends StatelessWidget {
-  const AppFloatingActionButton({Key? key}) : super(key: key);
+  const AppFloatingActionButton({super.key});
 
   @override
   Widget build(BuildContext context) {

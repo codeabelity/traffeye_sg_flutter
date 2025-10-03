@@ -35,6 +35,7 @@ class MapController extends GetxController {
 
   void setController(GoogleMapController controller) {
     _mapController = controller;
+    // ignore: deprecated_member_use
     _mapController.setMapStyle(_mapStyle.value);
   }
 
@@ -63,6 +64,6 @@ class MapController extends GetxController {
         await frameInfo.image.toByteData(format: ui.ImageByteFormat.png);
     final iconBytes = icon!.buffer.asUint8List();
 
-    markerIcon.value = BitmapDescriptor.fromBytes(iconBytes);
+    markerIcon.value = BitmapDescriptor.bytes(iconBytes);
   }
 }

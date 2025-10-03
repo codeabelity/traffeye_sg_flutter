@@ -8,7 +8,7 @@ import 'package:traffeye_sg_flutter/2_application/core/helpers/assets_path_helpe
 
 class AppBotNavBar extends StatelessWidget {
   final Function(int index) onTap;
-  const AppBotNavBar({Key? key, required this.onTap}) : super(key: key);
+  const AppBotNavBar({super.key, required this.onTap});
 
   @override
   Widget build(BuildContext context) {

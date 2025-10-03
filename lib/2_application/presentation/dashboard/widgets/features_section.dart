@@ -13,7 +13,7 @@ import 'package:traffeye_sg_flutter/2_application/presentation/profile/pages/hom
 import 'package:traffeye_sg_flutter/2_application/widgets/themed_text.dart';
 
 class FeaturesSection extends StatelessWidget {
-  const FeaturesSection({Key? key}) : super(key: key);
+  const FeaturesSection({super.key});
 
   @override
   Widget build(BuildContext context) {

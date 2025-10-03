@@ -17,7 +17,7 @@ class ChangeLayoutPage extends StatelessWidget {
       appBar: ThemedAppBar(
         title: IntlHelper.dashboardLayoutButton.tr,
       ),
-      backgroundColor: Theme.of(context).colorScheme.background,
+      backgroundColor: Theme.of(context).colorScheme.surface,
       body: ListView.builder(
         itemCount: layouts.length,
         itemBuilder: (_, index) {

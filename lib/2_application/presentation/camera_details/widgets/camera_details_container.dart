@@ -19,7 +19,7 @@ class CameraDetailsContainer extends StatelessWidget {
           insetPadding: EdgeInsets.all(30.w),
           child: Container(
             decoration: BoxDecoration(
-              color: colorScheme.background,
+              color: colorScheme.surface,
               borderRadius: StyleHelper.borderRadiusBig,
             ),
             child: Column(

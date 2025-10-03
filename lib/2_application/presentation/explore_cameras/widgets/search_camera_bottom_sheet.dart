@@ -16,7 +16,7 @@ class SearchCameraBottomSheet extends StatelessWidget {
 
     return Container(
       decoration: BoxDecoration(
-        color: colorScheme.background,
+        color: colorScheme.surface,
         borderRadius: BorderRadius.only(
           topLeft: Radius.circular(radius),
           topRight: Radius.circular(radius),

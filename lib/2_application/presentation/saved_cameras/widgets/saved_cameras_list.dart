@@ -7,7 +7,7 @@ import 'package:traffeye_sg_flutter/2_application/core/widgets/app_list_card.dar
 import 'package:traffeye_sg_flutter/2_application/core/widgets/app_scroll_view.dart';
 
 class SavedCamerasList extends StatelessWidget {
-  const SavedCamerasList({Key? key}) : super(key: key);
+  const SavedCamerasList({super.key});
 
   @override
   Widget build(BuildContext context) {

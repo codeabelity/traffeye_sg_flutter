@@ -8,14 +8,13 @@ import 'package:traffeye_sg_flutter/2_application/presentation/bot_nav/bot_nav_p
 import 'package:traffeye_sg_flutter/2_application/widgets/themed_text.dart';
 
 class SplashScreenPage extends StatefulWidget {
-  const SplashScreenPage({Key? key}) : super(key: key);
+  const SplashScreenPage({super.key});
 
   @override
   State<SplashScreenPage> createState() => _SplashScreenPageState();
 }
 
 class _SplashScreenPageState extends State<SplashScreenPage> {
-
   @override
   void initState() {
     super.initState();
@@ -81,11 +80,15 @@ class _SplashScreenPageState extends State<SplashScreenPage> {
 
   void _goToDashboardPage(BuildContext context) {
     Future.delayed(const Duration(seconds: 5), () {
-      Navigator.pushReplacement(
+      if (context.mounted) {
+        Navigator.pushReplacement(
           context,
           PageRouteBuilder(
-              transitionDuration: const Duration(seconds: 1),
-              pageBuilder: (_, __, ___) => const BotNavPage()));
+            transitionDuration: const Duration(seconds: 1),
+            pageBuilder: (_, __, ___) => const BotNavPage(),
+          ),
+        );
+      }
     });
   }
 }
@@ -93,7 +96,7 @@ class _SplashScreenPageState extends State<SplashScreenPage> {
 class _GradientBase extends StatelessWidget {
   final Widget child;
 
-  const _GradientBase({required this.child, Key? key}) : super(key: key);
+  const _GradientBase({required this.child});
 
   @override
   Widget build(BuildContext context) {
@@ -114,7 +117,7 @@ class _GradientBase extends StatelessWidget {
 class _GradientOverlay extends StatelessWidget {
   final Widget child;
 
-  const _GradientOverlay({required this.child, Key? key}) : super(key: key);
+  const _GradientOverlay({required this.child});
 
   @override
   Widget build(BuildContext context) {

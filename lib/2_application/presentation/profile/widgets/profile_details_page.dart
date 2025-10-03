@@ -24,7 +24,7 @@ class ProfileDetailsPage extends StatelessWidget {
       appBar: ThemedAppBar(
         title: pageTitle,
       ),
-      backgroundColor: Theme.of(context).colorScheme.background,
+      backgroundColor: Theme.of(context).colorScheme.surface,
       body: AppScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,

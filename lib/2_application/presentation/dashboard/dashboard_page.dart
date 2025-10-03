@@ -10,7 +10,7 @@ import 'package:traffeye_sg_flutter/2_application/presentation/dashboard/widgets
 import 'package:traffeye_sg_flutter/2_application/presentation/dashboard/widgets/saved_cameras_section.dart';
 
 class DashboardPage extends StatelessWidget {
-  const DashboardPage({Key? key}) : super(key: key);
+  const DashboardPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -44,7 +44,7 @@ class DashboardPage extends StatelessWidget {
       ),
       body: Container(
         height: double.infinity,
-        color: colorScheme.background,
+        color: colorScheme.surface,
         child: Obx(
           () {
             if (!controller.isSavedCamerasActive.value &&

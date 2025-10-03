@@ -19,13 +19,13 @@ class NegativeButton extends StatelessWidget {
     return TextButton(
       onPressed: () => onPressed(),
       style: ButtonStyle(
-        padding: MaterialStateProperty.all(
+        padding: WidgetStateProperty.all(
           EdgeInsets.all(12.w),
         ),
-        overlayColor: MaterialStateProperty.all(
+        overlayColor: WidgetStateProperty.all(
           AppTheme.negativeSplashColor,
         ),
-        shape: MaterialStateProperty.all(
+        shape: WidgetStateProperty.all(
           RoundedRectangleBorder(
             borderRadius: StyleHelper.borderRadiusSmall,
           ),
