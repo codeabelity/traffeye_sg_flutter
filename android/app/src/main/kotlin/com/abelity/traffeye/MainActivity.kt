@@ -1,4 +1,4 @@
-package com.abelherl.traffeye
+package com.abelity.traffeye
 
 import io.flutter.embedding.android.FlutterActivity
 
